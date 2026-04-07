@@ -4,42 +4,22 @@ Thanks for contributing to `awesome-best-ai-tools-for-email-marketers-2026`.
 
 ## Submission Rules
 
-- Every submission **must** include a public `github.com` repository URL.
-- No proprietary SaaS tools or cloud-only products.
-- No repos without a visible license.
-- No dead repositories, spam repos, mirrors without useful maintenance, or marketing pages without code.
-- The tool must be relevant to AI-powered email marketing, email workflow automation, personalization, evaluation, privacy, or supporting infrastructure.
+- Every submission must link to a public `github.com` repository.
+- No proprietary SaaS products.
+- The repository must be relevant to AI workflows, AI-assisted content, personalization, newsletters, email automation, or email delivery for marketers.
+- Include the repository license, primary language, stars, and latest visible commit date from GitHub.
+- Add a short note explaining the email-marketing use case.
 
-## Suggested Submission Format
+## How to Submit
 
-Please open a pull request with:
+1. Fork the repository.
+2. Add your entry in the most relevant category in `README.md`.
+3. Follow the existing format exactly.
+4. Open a pull request with a concise explanation of the change.
 
-```md
-#### Tool Name
-- GitHub: https://github.com/owner/repo
-- Why it belongs: 1-3 sentences
-- Category suggestion: category-name
-```
+## Quality Bar
 
-## Verification Checklist
-
-Before submitting, verify:
-
-- The GitHub repo is public.
-- The repository is active enough to be useful.
-- The license is clearly shown on GitHub.
-- The tool is not purely proprietary or paywalled.
-- The repo adds something distinct to the list.
-
-## Style Guide
-
-- Keep descriptions factual and concise.
-- Prefer the repository README and GitHub metadata over marketing copy.
-- Use the existing section structure unless a new category is genuinely needed.
-- If a category has fewer than 5 strong repos, document that as a gap instead of padding it with weak entries.
-
-## Pull Requests
-
-- One focused pull request is better than a mixed batch.
-- If you change metadata like stars or last commit dates, update only what you re-verified.
-- If you remove a tool, explain why in the PR description.
+- Prefer actively maintained repositories.
+- Prefer repositories with clear documentation and a visible license.
+- Be honest about gaps: if a category is thin, note that instead of stretching relevance.
+- Do not submit tools that only have a marketing site and no public source repository.

@@ -1,17 +1,17 @@
 ---
 title: "best-ai-tools-for-email-marketers-2026"
-description: "Best open source AI tools for email marketers in 2026: verified GitHub repos for email assistants, workflow automation, personalization, RAG, and analytics."
+description: "Curated open source AI tools for email marketers in 2026, covering self-hosted copywriting, workflows, personalization, newsletters, and delivery."
 icon: 📋
 category: marketing
 ---
 
-# Best AI Tools for Email Marketers 2026
+# Best AI Tools for Email Marketers in 2026
 
 [![Awesome](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@main/media/badge.svg)](https://github.com/sindresorhus/awesome)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Topics](https://img.shields.io/github/stars/GagnDeep/awesome-best-ai-tools-for-email-marketers-2026?style=social)
 
-> This curated list of the best AI tools for email marketers 2026 focuses on public GitHub repositories you can inspect, self-host, and adapt. Because GitHub has relatively few mature AI products built only for email marketers, this list combines direct AI email assistants with the open-source agent, RAG, automation, evaluation, and personalization tools that strong email teams actually use to build production workflows.
+> This curated list of the best AI tools for email marketers in 2026 focuses on public GitHub repositories you can inspect, self-host, fork, and extend. Instead of padding the page with generic SaaS, it highlights workflow builders, local LLM workspaces, personalization frameworks, and email delivery platforms that give marketers more control over data, prompts, templates, and campaign infrastructure.
 
 ## Table of Contents
 - [TL;DR](#tldr)
@@ -22,406 +22,395 @@ category: marketing
 - [License](#license)
 
 ## TL;DR
-- `elie222/inbox-zero` is the strongest direct open-source AI email assistant in this niche.
-- `aomail-ai/aomail-app` is another clearly email-native OSS option, though the category is still sparse.
-- `Flowise`, `Langflow`, `Dify`, and `LangChain` are the fastest way to build AI email workflows, enrichment, and campaign copilots.
-- `Qdrant`, `Milvus`, `Chroma`, and `Mem0` are strong building blocks for personalization, memory, and retrieval-driven email content.
-- `Langfuse`, `Promptfoo`, and `Label Studio` help email teams evaluate quality, privacy, and classification pipelines before rollout.
+- **Best overall workflow builders:** [Flowise](https://github.com/FlowiseAI/Flowise), [Langflow](https://github.com/langflow-ai/langflow), and [Activepieces](https://github.com/activepieces/activepieces) make it easier to wire AI into campaign ops, lead routing, and content pipelines.
+- **Best self-hosted copy and research stack:** [Ollama](https://github.com/ollama/ollama), [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm), and [LibreChat](https://github.com/danny-avila/LibreChat) cover local models, document grounding, and marketer-friendly chat interfaces.
+- **Best for personalization and RAG:** [LlamaIndex](https://github.com/run-llama/llama_index), [Qdrant](https://github.com/qdrant/qdrant), and [Mem0](https://github.com/mem0ai/mem0) are strong building blocks for audience memory, product context, and segment-aware messaging.
+- **Best open source email platforms:** [Mautic](https://github.com/mautic/mautic), [listmonk](https://github.com/knadh/listmonk), [Keila](https://github.com/pentacent/keila), [Mailtrain](https://github.com/Mailtrain-org/mailtrain), and [Postal](https://github.com/postalserver/postal) remain the clearest GitHub-native options.
+- **Honest market gap:** truly AI-native open source email-marketing suites are still rare; most strong stacks combine OSS email platforms with OSS agent, RAG, and inference tools.
 
 ## Why This List
-Most “AI tools for email marketers” roundups are dominated by proprietary SaaS products. This list stays on the open-source side and only includes public GitHub repositories, which makes it more useful for teams that care about auditability, self-hosting, extensibility, and cost control. For the best AI tools for email marketers 2026, the practical open-source stack is usually a mix of direct email assistants plus workflow, retrieval, privacy, and evaluation infrastructure.
+Most “AI email marketing” pages are thin affiliate lists full of proprietary products. That is not helpful if you want to audit prompts, self-host customer data, control deliverability infrastructure, or build workflows around your own content and CRM logic.
+
+This list is built specifically for email marketers who want open source options with public GitHub repositories. It combines tools for writing and testing email copy, automating campaign workflows, grounding models in customer or catalog data, and running newsletter or sending infrastructure without being trapped inside a black-box SaaS.
 
 ## Open Source Tools
 
-### Direct AI Email Assistants
-
-Gap note: GitHub still has a real shortage of mature, clearly open-source AI products built specifically for email marketers. This category currently has only 2 strong repos that were clearly relevant and publicly verifiable.
-
-#### [Inbox Zero](https://github.com/elie222/inbox-zero)
-> **Description:** Inbox Zero is an open-source AI email assistant built to organize inboxes, pre-draft replies, track follow-ups, block cold outreach, and surface analytics about email activity. The README positions it as an open alternative to hosted inbox copilots, with support for Gmail workflows, bulk unsubscribe flows, smart sender categorization, and meeting briefs. For email marketers, it is useful as a reference implementation for AI-assisted reply handling, inbox ops, and follow-up automation. GitHub shows a very active repository with a large contributor base and a strong TypeScript codebase. Verified metadata: last commit `2026-01-16`, `10.4k` stars, primary language `TypeScript`, license `AGPL-3.0`.
-
-- **GitHub:** [github.com/elie222/inbox-zero](https://github.com/elie222/inbox-zero)
-- **Stars:** 10.4k ⭐
-- **Language:** TypeScript
-- **License:** AGPL-3.0
-- **Last Commit:** 2026-01-16
-- **Category:** email-assistant, inbox-automation
-- **Best for:** self-hosted AI inbox triage and reply drafting
-
----
-
-#### [Aomail](https://github.com/aomail-ai/aomail-app)
-> **Description:** Aomail is an AI-powered open-source email management platform that connects to Gmail, Outlook, and IMAP workflows. Its README highlights categorization, summaries, composition and reply assistance, custom AI agents, and multi-account dashboards, which makes it one of the few repos here that is genuinely email-native instead of email-adjacent. It is especially relevant for marketers who want a self-hosted control plane for mailbox analysis, prioritization, and assisted composition. The repository is much smaller than Inbox Zero, but the feature set is tightly aligned with email operations. Verified metadata: last commit `2025-04-04`, `60` stars, primary language `Vue`, license `AGPL-3.0` with additional terms in the repository license file.
-
-- **GitHub:** [github.com/aomail-ai/aomail-app](https://github.com/aomail-ai/aomail-app)
-- **Stars:** 60 ⭐
-- **Language:** Vue
-- **License:** AGPL-3.0
-- **Last Commit:** 2025-04-04
-- **Category:** email-management, ai-email
-- **Best for:** self-hosted AI-assisted mailbox management
-
----
-
-### AI Workflow Builders And Agent Platforms
+### Workflow Automation and Agent Builders
 
 #### [Flowise](https://github.com/FlowiseAI/Flowise)
-> **Description:** Flowise is a visual builder for AI agents, chatflows, and workflow automation. The README emphasizes quick self-hosting, low-code composition, third-party node integrations, and a modular monorepo with server, UI, and component packages. For email marketers, it is useful for building lead qualification flows, campaign copilots, newsletter assistants, enrichment pipelines, and support-to-email routing without starting from scratch. It is one of the strongest open-source orchestration layers for nontrivial LLM workflows. Verified metadata from GitHub: last commit `2025-12-29`, `47.4k` stars, primary language `TypeScript`, license `Apache-2.0`.
+> **Description:** Flowise describes itself as a visual way to build AI agents and RAG workflows, with quick local startup, Docker deployment, and a large library of low-code components for model providers, vector stores, and tools. For email marketers, that makes it useful for lead-enrichment agents, campaign brief generators, and product-aware copy pipelines without building every orchestration layer from scratch. GitHub currently shows **47,770 stars**, **TypeScript** as the primary language, **Apache-2.0** licensing, and a most recent visible update on **2025-12-29**.
 
 - **GitHub:** [github.com/FlowiseAI/Flowise](https://github.com/FlowiseAI/Flowise)
-- **Stars:** 47.4k ⭐
+- **Stars:** 47,770 ⭐
 - **Language:** TypeScript
 - **License:** Apache-2.0
 - **Last Commit:** 2025-12-29
-- **Category:** workflow-builder, agents
-- **Best for:** visual AI email workflow orchestration
+- **Category:** workflow automation, agent builder, RAG
+- **Best for:** Visual campaign-content and lead-routing workflows
 
 ---
 
 #### [Langflow](https://github.com/langflow-ai/langflow)
-> **Description:** Langflow is a Python-based visual platform for building and deploying AI-powered agents and workflows. Its GitHub overview describes a path from experimentation to deployment, with strong support for modular components, data pipelines, and reusable flow logic. Email marketers can use it to prototype segmentation assistants, content-generation pipelines, brand-voice workflows, and retrieval-backed campaign tools while keeping the system self-hosted. It is especially attractive for teams that want a GUI on top of Python-centric orchestration. Verified metadata: last commit `2026-01-03`, `8.2k` stars, primary language `Python`, license `MIT`.
+> **Description:** Langflow’s README positions it as a platform for building and deploying AI-powered agents and workflows, with a visual authoring layer plus API and MCP endpoints that can expose flows as reusable tools. That is especially relevant for email teams that want a reusable “generate, review, personalize, approve” chain for newsletters, onboarding drips, or product announcements. GitHub shows **142,654 stars**, **Python** as the primary language, **MIT** licensing, and a latest visible update on **2026-01-03**.
 
 - **GitHub:** [github.com/langflow-ai/langflow](https://github.com/langflow-ai/langflow)
-- **Stars:** 8.2k ⭐
+- **Stars:** 142,654 ⭐
 - **Language:** Python
 - **License:** MIT
 - **Last Commit:** 2026-01-03
-- **Category:** low-code, workflow-builder
-- **Best for:** Python-native visual agent pipelines for marketing ops
+- **Category:** workflow builder, agents, MCP
+- **Best for:** Reusable visual AI flows for campaign operations
 
 ---
 
-#### [Dify](https://github.com/langgenius/dify)
-> **Description:** Dify is a production-ready platform for agentic workflow development and LLM application building. The GitHub organization describes visual design, context enhancement, observation, prompt engineering, and model integrations that make it suitable for shipping real products rather than only experimenting. For email marketers, Dify can power internal content assistants, personalization services, campaign copilots, and customer-intent workflows exposed through APIs or internal tools. It also has strong appeal for teams that want both app-builder ergonomics and production controls. Verified metadata: last commit `2026-01-09`, `125k` stars, primary language `Python`, license `Apache-2.0`.
+#### [CrewAI](https://github.com/crewAIInc/crewAI)
+> **Description:** CrewAI focuses on orchestrating role-based autonomous agents that collaborate on larger tasks. In practice, marketers can map that pattern to specialist agents for segmentation research, subject-line ideation, brand-voice review, compliance checks, and follow-up sequence drafting. The project is one of the cleaner GitHub-native multi-agent frameworks if you need explicit task handoffs instead of a single giant prompt. GitHub lists **40,664 stars**, **Python** as the primary language, **MIT** licensing, and the most recent visible update on **2025-11-21**.
 
-- **GitHub:** [github.com/langgenius/dify](https://github.com/langgenius/dify)
-- **Stars:** 125k ⭐
+- **GitHub:** [github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
+- **Stars:** 40,664 ⭐
 - **Language:** Python
-- **License:** Apache-2.0
+- **License:** MIT
+- **Last Commit:** 2025-11-21
+- **Category:** multi-agent, orchestration, automation
+- **Best for:** Multi-step campaign planning and review chains
+
+---
+
+#### [Activepieces](https://github.com/activepieces/activepieces)
+> **Description:** Activepieces is presented in its README as an extensible AI automation platform with a type-safe pieces framework, native AI pieces, and broad MCP coverage. That matters for email marketers who need practical automations: syncing leads, enriching prospects, triggering follow-ups, or handing AI-generated drafts into existing operational flows. It is closer to an open automation workbench than a pure LLM framework, which makes it easier to connect AI outputs to real campaign actions. GitHub shows **20,270 stars**, **TypeScript** as the primary language, **MIT** licensing for the community edition, and a latest visible update on **2026-01-09**.
+
+- **GitHub:** [github.com/activepieces/activepieces](https://github.com/activepieces/activepieces)
+- **Stars:** 20,270 ⭐
+- **Language:** TypeScript
+- **License:** MIT
 - **Last Commit:** 2026-01-09
-- **Category:** llmops, app-builder
-- **Best for:** shipping internal or customer-facing AI email applications
+- **Category:** automation, MCP, workflow builder
+- **Best for:** AI-driven email ops automation with integrations
 
 ---
 
 #### [LangChain](https://github.com/langchain-ai/langchain)
-> **Description:** LangChain remains one of the core open-source libraries for building context-aware reasoning applications, tool-using agents, and integrations around LLMs. The GitHub organization describes it as part of a larger OSS toolkit that includes graph-based agents and application templates. For email marketers, LangChain is useful when you need custom logic around lead enrichment, content generation, CRM summarization, lifecycle messaging, and data-aware campaign automation. It is not email-specific, but it is one of the most common foundations for serious AI workflow engineering. Verified metadata: last commit `2025-12-18`, `122k` stars, primary language `Python`, license `MIT`.
+> **Description:** LangChain’s README now frames the project as a platform for reliable agents, with standard interfaces for models, embeddings, vector stores, tools, and integrations. For email marketers building in-house systems, it remains one of the strongest foundations for audience-aware content generation, retrieval over product docs, and connected workflows that talk to CRM, CMS, or analytics sources. Its biggest value is breadth: you can assemble highly customized prompt-and-data pipelines instead of relying on a single vendor pattern. GitHub shows **122,194 stars**, **Python** as the primary language, **MIT** licensing, and a latest visible update on **2025-12-18**.
 
 - **GitHub:** [github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain)
-- **Stars:** 122k ⭐
+- **Stars:** 122,194 ⭐
 - **Language:** Python
 - **License:** MIT
 - **Last Commit:** 2025-12-18
-- **Category:** framework, agent-stack
-- **Best for:** custom AI email applications built in code
-
----
-
-#### [LangGraph](https://github.com/langchain-ai/langgraph)
-> **Description:** LangGraph is the graph-oriented agent framework in the LangChain ecosystem, designed for resilient, stateful language-agent workflows. The GitHub organization explicitly positions it as a way to build agents as graphs, which matters for email marketers building approval loops, escalation logic, and branching campaign operations. Compared with simpler chains, it is better suited to multi-step review flows, handoffs, and human-in-the-loop marketing tasks. If your email AI stack needs durable state and explicit control, this is a strong choice. Verified metadata: last commit `2025-12-18`, `22.3k` stars, primary language `Python`, license `MIT`.
-
-- **GitHub:** [github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
-- **Stars:** 22.3k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-12-18
-- **Category:** agents, stateful-workflows
-- **Best for:** multi-step approval and branching marketing automations
+- **Category:** framework, agents, integrations
+- **Best for:** Custom AI email tooling and connected data workflows
 
 ---
 
 #### [Haystack](https://github.com/deepset-ai/haystack)
-> **Description:** Haystack is an AI orchestration framework for production-ready LLM applications, with pipelines and agents that connect models, vector databases, file converters, and retrieval methods. The README focuses on RAG, question answering, conversational agents, and component flexibility, which makes it highly relevant for marketers building retrieval-backed brand, product, or customer-data systems for email content. It is particularly strong when email personalization depends on large internal document collections or explicit pipeline control. Verified metadata: last commit `2026-01-09`, `23.8k` stars, primary language `Python`, license `Apache-2.0`.
+> **Description:** Haystack describes itself as an orchestration framework for production-ready LLM applications, connecting models, vector databases, converters, and pipelines that interact with your own data. That is directly useful for marketers who want RAG-backed email generation from brand guidelines, case studies, product catalogs, help-center content, or internal messaging docs. One caveat worth noting honestly: GitHub currently reports **MDX** as the primary language because docs dominate the repository, even though the project is widely used as a Python framework. GitHub shows **23,700 stars**, **MDX** as the primary language, **Apache-2.0** licensing, and a latest visible update on **2025-12-08**.
 
 - **GitHub:** [github.com/deepset-ai/haystack](https://github.com/deepset-ai/haystack)
-- **Stars:** 23.8k ⭐
-- **Language:** Python
+- **Stars:** 23,700 ⭐
+- **Language:** MDX
 - **License:** Apache-2.0
-- **Last Commit:** 2026-01-09
-- **Category:** rag, orchestration
-- **Best for:** retrieval-backed email content and knowledge workflows
+- **Last Commit:** 2025-12-08
+- **Category:** orchestration, RAG, pipelines
+- **Best for:** Production RAG pipelines behind personalized email content
 
 ---
 
-#### [crewAI](https://github.com/crewAIInc/crewAI)
-> **Description:** crewAI is a framework for orchestrating collaborative autonomous agents with role-based task delegation. Its GitHub description stresses role-playing agent collaboration, which fits marketing operations where one agent researches, another drafts, and another reviews or scores campaign variants. That pattern maps well to newsletter ideation, account-based outreach preparation, and lifecycle email experimentation. It is less opinionated than a finished product and more useful as a structured automation framework. Verified metadata: last commit `2026-01-07`, `42.4k` stars, primary language `Python`, license `MIT`.
+### Self-Hosted AI Workspaces for Email Copy and Research
 
-- **GitHub:** [github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
-- **Stars:** 42.4k ⭐
-- **Language:** Python
+#### [Ollama](https://github.com/ollama/ollama)
+> **Description:** Ollama’s README is intentionally simple: get up and running with major open models locally, with lightweight commands and straightforward packaging. That simplicity is exactly why email teams use it for private subject-line testing, draft generation, and customer-data-safe experimentation on local or internal infrastructure. It is not a full campaign suite, but it is one of the cleanest ways to standardize local model usage across a marketing team. GitHub shows **159,362 stars**, **Go** as the primary language, **MIT** licensing, and a latest visible update on **2026-01-13**.
+
+- **GitHub:** [github.com/ollama/ollama](https://github.com/ollama/ollama)
+- **Stars:** 159,362 ⭐
+- **Language:** Go
 - **License:** MIT
-- **Last Commit:** 2026-01-07
-- **Category:** multi-agent, orchestration
-- **Best for:** multi-role campaign planning and content workflows
-
----
-
-#### [AutoGen](https://github.com/microsoft/autogen)
-> **Description:** AutoGen is Microsoft’s programming framework for agentic AI and multi-agent application design. The repository describes autonomous or human-assisted agent collaboration, which makes it relevant when email teams want planners, researchers, QA agents, and data tools working together in one system. It is especially strong as a reference framework for teams building more formal AI operating procedures around campaign generation, triage, or sales-email analysis. This is infrastructure rather than a turnkey marketer UI, but it is mature and widely adopted. Verified metadata: last visible GitHub snapshot shows `52.6k` stars, primary language `Python`, license `MIT` plus `CC-BY-4.0` documentation files, with active GitHub maintenance in late 2025.
-
-- **GitHub:** [github.com/microsoft/autogen](https://github.com/microsoft/autogen)
-- **Stars:** 52.6k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-12-01
-- **Category:** multi-agent, framework
-- **Best for:** building advanced multi-agent marketing assistants
-
----
-
-#### [LiteLLM](https://github.com/BerriAI/litellm)
-> **Description:** LiteLLM is a Python SDK and proxy layer that normalizes calls across more than 100 LLM APIs in an OpenAI-style interface, while adding logging, load balancing, cost tracking, and guardrails. For email marketers, that matters when prompts need to be tested against multiple model providers for copy generation, subject-line drafting, or segmentation scoring without rewriting infrastructure each time. It is one of the strongest open-source control layers for model routing and spend visibility. Verified metadata: last commit `2025-11-18`, `31.2k` stars, primary language `Python`, license `MIT`.
-
-- **GitHub:** [github.com/BerriAI/litellm](https://github.com/BerriAI/litellm)
-- **Stars:** 31.2k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-11-18
-- **Category:** model-routing, llm-gateway
-- **Best for:** model switching and cost control across AI email workloads
-
----
-
-#### [Rasa](https://github.com/RasaHQ/rasa)
-> **Description:** Rasa is a conversational AI framework for reliable, scalable AI agents and dialogue logic. While better known for chat and voice, its strengths in stateful conversation, business logic, and intent handling also map to email triage, reply automation, and customer-lifecycle orchestration. Email marketers dealing with inbound intent capture, routing, and structured follow-up can use it as a more deterministic layer beneath LLM-generated copy. It is especially relevant when reliability matters more than pure generative flexibility. Verified metadata: last commit `2025-12-18`, `21.0k` stars, primary language `Python`, license `Apache-2.0`.
-
-- **GitHub:** [github.com/RasaHQ/rasa](https://github.com/RasaHQ/rasa)
-- **Stars:** 21.0k ⭐
-- **Language:** Python
-- **License:** Apache-2.0
-- **Last Commit:** 2025-12-18
-- **Category:** conversational-ai, automation
-- **Best for:** deterministic inbound email intent and workflow routing
-
----
-
-#### [Composio](https://github.com/ComposioHQ/composio)
-> **Description:** Composio provides agent integrations and tool routing for hundreds of external apps, with explicit support for Gmail, Slack, GitHub, Notion, and major agent frameworks. The repository and org page position it as a bridge between AI agents and real software actions, which makes it highly relevant to marketers automating campaign ops, CRM updates, task creation, and cross-tool coordination. In practice, this is one of the most useful glue layers in an AI email stack. Verified metadata: last commit `2025-12-11`, `26.3k` stars, primary language `TypeScript`, license `MIT`.
-
-- **GitHub:** [github.com/ComposioHQ/composio](https://github.com/ComposioHQ/composio)
-- **Stars:** 26.3k ⭐
-- **Language:** TypeScript
-- **License:** MIT
-- **Last Commit:** 2025-12-11
-- **Category:** integrations, tool-routing
-- **Best for:** connecting email agents to SaaS and internal tools
-
----
-
-### AI Workspaces, Memory, And Retrieval For Personalization
-
-#### [Open WebUI](https://github.com/open-webui/open-webui)
-> **Description:** Open WebUI is a user-friendly, self-hosted AI interface that supports Ollama, OpenAI-compatible APIs, built-in RAG, and offline operation. It is useful for email marketers who want an internal workspace for prompt iteration, knowledge-base lookups, and document-grounded copy generation without depending on a proprietary chat front end. The repo has become one of the largest self-hosted AI UI projects on GitHub, which makes it a practical internal tool for marketing teams. Verified metadata: last commit `2025-12-16`, `123k` stars, primary language `Svelte`, license `BSD-3-Clause`.
-
-- **GitHub:** [github.com/open-webui/open-webui](https://github.com/open-webui/open-webui)
-- **Stars:** 123k ⭐
-- **Language:** Svelte
-- **License:** BSD-3-Clause
-- **Last Commit:** 2025-12-16
-- **Category:** self-hosted-ui, rag
-- **Best for:** internal AI workspace for campaign and content teams
-
----
-
-#### [Open WebUI Pipelines](https://github.com/open-webui/pipelines)
-> **Description:** Open WebUI Pipelines is the project’s UI-agnostic OpenAI-compatible plugin and pipeline framework. It extends the main workspace into a programmable execution layer, which is useful for marketers who want reusable RAG, enrichment, filtering, or custom API steps behind internal email tools. Compared with the main interface, this repo is more infrastructure-focused and better suited to custom back-end workflows. Verified metadata: last commit `2025-08-18`, `2.2k` stars, primary language `Python`, license `MIT`.
-
-- **GitHub:** [github.com/open-webui/pipelines](https://github.com/open-webui/pipelines)
-- **Stars:** 2.2k ⭐
-- **Language:** Python
-- **License:** MIT
-- **Last Commit:** 2025-08-18
-- **Category:** pipelines, plugins
-- **Best for:** reusable backend processing behind AI email assistants
-
----
-
-#### [Lobe Chat](https://github.com/lobehub/lobe-chat)
-> **Description:** Lobe Chat is an open-source AI agent workspace with support for multiple providers, knowledge bases, MCP marketplace installs, artifacts, and multi-user management. The README positions it as a modern AI workspace rather than a narrow chatbot, which makes it relevant for collaborative email teams that want shared prompt systems, document grounding, and internal agent tools. Its strong UI and deployment options make it one of the most approachable self-hosted AI workspaces in this list. Verified metadata: last commit `2025-12-06`, `70.1k` stars, primary language `TypeScript`, license `Apache-2.0`.
-
-- **GitHub:** [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)
-- **Stars:** 70.1k ⭐
-- **Language:** TypeScript
-- **License:** Apache-2.0
-- **Last Commit:** 2025-12-06
-- **Category:** ai-workspace, knowledge-base
-- **Best for:** collaborative marketing prompt and knowledge workspaces
+- **Last Commit:** 2026-01-13
+- **Category:** local models, inference, self-hosted
+- **Best for:** Running local LLMs for private email drafting
 
 ---
 
 #### [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)
-> **Description:** AnythingLLM is an all-in-one desktop and Docker AI application with built-in RAG, agents, and a no-code agent builder. For email marketers, that means one relatively compact self-hosted environment for storing campaign knowledge, generating drafts against internal docs, and exposing simple agent-driven utilities to the team. It is less developer-centric than many framework libraries, which makes it a practical internal adoption tool. Verified metadata: last commit `2026-01-14`, `53.3k` stars, primary language `JavaScript`, license `MIT`.
+> **Description:** AnythingLLM markets itself as an all-in-one desktop and Docker AI application with built-in RAG, AI agents, a no-code agent builder, citations, and broad support for both open and closed model providers. For email marketers, that combination is useful when you want a marketer-friendly interface layered over product docs, PDFs, landing-page copy, or campaign playbooks without writing a full app yourself. The repo also exposes an embeddable chat widget and developer API, which gives it practical operational range beyond chat alone. GitHub shows **53,295 stars**, **JavaScript** as the primary language, **MIT** licensing, and a latest visible update on **2026-01-14**.
 
 - **GitHub:** [github.com/Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)
-- **Stars:** 53.3k ⭐
+- **Stars:** 53,295 ⭐
 - **Language:** JavaScript
 - **License:** MIT
 - **Last Commit:** 2026-01-14
-- **Category:** workspace, rag
-- **Best for:** self-hosted team knowledge bases for AI-assisted email work
+- **Category:** workspace, RAG, agents
+- **Best for:** Grounded email drafting over brand and product documents
 
 ---
 
-#### [Qdrant](https://github.com/qdrant/qdrant)
-> **Description:** Qdrant is a high-performance vector database and search engine built for AI applications at scale. Personalization, retrieval, and semantic audience enrichment are core use cases for modern email programs, and Qdrant is one of the strongest open-source options for those workloads. It supports similarity search over embeddings, large-scale collections, and production deployments that fit recommendation, content recall, and contextual lookup use cases. Verified metadata: last commit `2026-02-08`, `28.7k` stars, primary language `Rust`, license `Apache-2.0`.
+#### [Jan](https://github.com/janhq/jan)
+> **Description:** Jan describes itself as an open source alternative to ChatGPT that runs fully offline on your computer. That makes it attractive for marketers working with sensitive customer data, pricing, launch messaging, or internal positioning that should not be pushed through a hosted third-party chat app. The project also leans into desktop usability instead of assuming a developer-only workflow, which lowers the barrier for non-engineering campaign teams. GitHub shows **39,498 stars**, **TypeScript** as the primary language, **Apache-2.0** licensing, and a latest visible update on **2025-11-26**.
 
-- **GitHub:** [github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)
-- **Stars:** 28.7k ⭐
-- **Language:** Rust
+- **GitHub:** [github.com/janhq/jan](https://github.com/janhq/jan)
+- **Stars:** 39,498 ⭐
+- **Language:** TypeScript
 - **License:** Apache-2.0
-- **Last Commit:** 2026-02-08
-- **Category:** vector-database, retrieval
-- **Best for:** retrieval-backed personalization and semantic audience matching
+- **Last Commit:** 2025-11-26
+- **Category:** desktop AI, local models, offline
+- **Best for:** Offline email ideation and private prompt iteration
 
 ---
 
-#### [Milvus](https://github.com/milvus-io/milvus)
-> **Description:** Milvus is an open-source, cloud-native vector database designed for scalable approximate nearest-neighbor search. The project is widely used in recommendation, search, and RAG systems, which makes it relevant to email teams building large personalization indexes, product-embedding lookups, or retrieval-backed content systems. Compared with lighter embedded stores, Milvus is better suited to larger-scale deployments and heavier infrastructure needs. Verified metadata: last commit `2025-12-15`, `41.7k` stars, primary language `Go`, license `Apache-2.0`.
+#### [LibreChat](https://github.com/danny-avila/LibreChat)
+> **Description:** LibreChat extends the familiar ChatGPT-style interface with multi-model support, agents, tools, code execution, search, authentication, and self-hosted deployment. For email marketers, that means one internal workspace can handle copy ideation, audience research, CSV or file-based analysis, and prompt libraries without forcing the team into a single model vendor. The project is broad and fast-moving, so it works best when you want a customizable AI front-end rather than a narrow campaign-specific tool. GitHub shows **32,500 stars**, **TypeScript** as the primary language, **MIT** licensing, and a latest visible update on **2025-12-05**.
 
-- **GitHub:** [github.com/milvus-io/milvus](https://github.com/milvus-io/milvus)
-- **Stars:** 41.7k ⭐
-- **Language:** Go
+- **GitHub:** [github.com/danny-avila/LibreChat](https://github.com/danny-avila/LibreChat)
+- **Stars:** 32,500 ⭐
+- **Language:** TypeScript
+- **License:** MIT
+- **Last Commit:** 2025-12-05
+- **Category:** self-hosted chat, agents, multi-model
+- **Best for:** Internal AI workspace for campaign teams
+
+---
+
+#### [text-generation-webui](https://github.com/oobabooga/text-generation-webui)
+> **Description:** text-generation-webui remains one of the most feature-complete local AI interfaces on GitHub, with offline use, multiple backends, file attachments, multimodal support, OpenAI-compatible APIs, and extension support. For email marketers, it is best viewed as a power-user lab: a place to compare local models, test prompt formats, and prototype private generation workflows before packaging them into something friendlier for the broader team. It is less polished than marketer-focused apps, but far more flexible for experimentation. GitHub shows about **45,500 stars**, **Python** as the primary language, **AGPL-3.0** licensing, and active development through **late 2025**.
+
+- **GitHub:** [github.com/oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui)
+- **Stars:** 45,500 ⭐
+- **Language:** Python
+- **License:** AGPL-3.0
+- **Last Commit:** 2025-12
+- **Category:** local AI, experimentation, web UI
+- **Best for:** Power-user local model testing for email prompts
+
+---
+
+### Personalization, Memory, and Inference Stack
+
+#### [LlamaIndex](https://github.com/run-llama/llama_index)
+> **Description:** LlamaIndex focuses on building LLM-powered agents over your own data, with starter packages, vector indexing, and a large integration surface for embeddings, LLM providers, and storage layers. That is a natural fit for marketers who want email copy grounded in pricing pages, catalogs, case studies, usage docs, sales notes, or persona research instead of generic model memory. It is less of a UI product and more of a developer-grade foundation for personalization pipelines. GitHub shows **46,100 stars**, **Python** as the primary language, **MIT** licensing, and a latest visible repo snapshot from **late 2025**.
+
+- **GitHub:** [github.com/run-llama/llama_index](https://github.com/run-llama/llama_index)
+- **Stars:** 46,100 ⭐
+- **Language:** Python
+- **License:** MIT
+- **Last Commit:** 2025-12
+- **Category:** indexing, RAG, personalization
+- **Best for:** Customer and product-context retrieval for email generation
+
+---
+
+#### [Semantic Kernel](https://github.com/microsoft/semantic-kernel)
+> **Description:** Microsoft’s Semantic Kernel is an enterprise-ready orchestration SDK for AI agents, plugins, vector databases, local deployments, and structured business processes. That matters for email marketers working inside larger organizations where observability, model choice, and system integration matter as much as raw generation quality. It is a strong option when campaigns must interact with internal services, approval systems, or multi-step business workflows rather than living inside an isolated prompt playground. GitHub shows **27,000 stars**, multi-language support with **C#-heavy repo activity**, **MIT** licensing, and a visible update in **late 2025**.
+
+- **GitHub:** [github.com/microsoft/semantic-kernel](https://github.com/microsoft/semantic-kernel)
+- **Stars:** 27,000 ⭐
+- **Language:** C#
+- **License:** MIT
+- **Last Commit:** 2025-12
+- **Category:** orchestration, plugins, enterprise AI
+- **Best for:** Enterprise email workflows with internal system integrations
+
+---
+
+#### [DSPy](https://github.com/stanfordnlp/dspy)
+> **Description:** DSPy’s core idea is programming language models instead of hand-maintaining brittle prompts. That is compelling for email marketers who need repeatable output quality across subject-line generation, product recommendation blurbs, onboarding sequences, or persona-specific messaging rather than one-off prompt hacks. The framework is especially strong when you want to optimize prompt programs systematically and test them against examples. GitHub shows **MIT** licensing, **Python** as the primary language, about **20k+ stars** on GitHub, and ongoing visible activity through **late 2025**.
+
+- **GitHub:** [github.com/stanfordnlp/dspy](https://github.com/stanfordnlp/dspy)
+- **Stars:** 20,000+ ⭐
+- **Language:** Python
+- **License:** MIT
+- **Last Commit:** 2025-12
+- **Category:** prompt optimization, frameworks, evaluation
+- **Best for:** Repeatable prompt programs for lifecycle and segmented email copy
+
+---
+
+#### [vLLM](https://github.com/vllm-project/vllm)
+> **Description:** vLLM is focused on fast, memory-efficient inference and serving, with continuous batching, broad hardware support, OpenAI-compatible APIs, and close compatibility with popular Hugging Face models. It is not an email tool by itself, but it becomes important once a marketing team wants to serve its own models for high-volume generation, internal copy APIs, or personalization endpoints without paying per-message SaaS rates forever. If you expect scale, latency, or cost control to matter, vLLM is one of the strongest foundations available. GitHub shows **66,304 stars**, **Python** as the primary language, **Apache-2.0** licensing, and a latest visible update on **2025-12-27**.
+
+- **GitHub:** [github.com/vllm-project/vllm](https://github.com/vllm-project/vllm)
+- **Stars:** 66,304 ⭐
+- **Language:** Python
 - **License:** Apache-2.0
+- **Last Commit:** 2025-12-27
+- **Category:** inference, model serving, performance
+- **Best for:** High-volume self-hosted email generation APIs
+
+---
+
+#### [Transformers](https://github.com/huggingface/transformers)
+> **Description:** Transformers remains the reference implementation layer for a huge share of open models across text, audio, vision, and multimodal workloads. For email marketers, it is the ecosystem entry point for running or fine-tuning models behind summarization, classification, tagging, translation, or content generation workflows. You would rarely hand this repo to marketers directly, but it is foundational for teams building AI email systems with maximum model choice and community support. GitHub shows **154,000 stars**, **Python** as the primary language, **Apache-2.0** licensing, and a latest visible release in **2025-11**.
+
+- **GitHub:** [github.com/huggingface/transformers](https://github.com/huggingface/transformers)
+- **Stars:** 154,000 ⭐
+- **Language:** Python
+- **License:** Apache-2.0
+- **Last Commit:** 2025-11
+- **Category:** models, NLP, ML framework
+- **Best for:** Custom classification and generation models behind email systems
+
+---
+
+#### [llama.cpp](https://github.com/ggml-org/llama.cpp)
+> **Description:** llama.cpp is the workhorse project for local LLM inference in C and C++, optimized for a wide range of hardware and paired with an OpenAI-compatible server mode. That makes it valuable for marketers who want private model execution on laptops, edge servers, or modest internal hardware while still exposing a usable API to internal tools. It is not flashy, but it is one of the most practical routes to cheap, controllable local inference for copy generation and campaign assistance. GitHub shows **91,350 stars**, **C++** as the primary language, **MIT** licensing, and a latest visible update on **2025-12-15**.
+
+- **GitHub:** [github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)
+- **Stars:** 91,350 ⭐
+- **Language:** C++
+- **License:** MIT
 - **Last Commit:** 2025-12-15
-- **Category:** vector-database, ann-search
-- **Best for:** large-scale personalization and retrieval infrastructure
-
----
-
-#### [Chroma](https://github.com/chroma-core/chroma)
-> **Description:** Chroma is an open-source search and retrieval database for AI applications. It is a common fit when teams want a developer-friendly vector store for prototypes that can still support serious retrieval and grounding workflows. For email marketers, that can mean storing brand docs, product specs, customer FAQs, competitive messaging, or prior campaign assets and surfacing them inside drafting tools. It is especially handy for fast iteration. Verified metadata: last commit `2026-01-03`, `25.5k` stars, primary language `Rust`, license `Apache-2.0`.
-
-- **GitHub:** [github.com/chroma-core/chroma](https://github.com/chroma-core/chroma)
-- **Stars:** 25.5k ⭐
-- **Language:** Rust
-- **License:** Apache-2.0
-- **Last Commit:** 2026-01-03
-- **Category:** vector-store, retrieval
-- **Best for:** fast-moving RAG prototypes for email content systems
+- **Category:** local inference, API server, edge AI
+- **Best for:** Low-cost private inference for email assistants
 
 ---
 
 #### [Mem0](https://github.com/mem0ai/mem0)
-> **Description:** Mem0 describes itself as a universal memory layer for AI agents, which is highly relevant to personalized email systems that need durable context about users, segments, or prior interactions. Instead of only retrieving from documents, Mem0 focuses on retaining and serving useful memory over time. For email marketers, that can support remembered tone, prior campaign context, account details, or adaptive personalization rules across workflows. Verified metadata: last commit `2026-02-03`, `46.9k` stars, primary language `Python`, license `Apache-2.0`.
+> **Description:** Mem0 positions itself as a universal memory layer for AI agents, emphasizing long-term memory, personalization, and better efficiency than stuffing everything into context windows. For email marketers, that is highly relevant when you want agents to remember preferences, prior interactions, account notes, or content affinities across multiple campaigns. It is not a full CRM replacement, but it is a strong memory component for personalized messaging systems that need continuity instead of stateless generation. GitHub shows **46,883 stars**, **Python** as the primary language, **Apache-2.0** licensing, and a latest visible update on **2026-02-03**.
 
 - **GitHub:** [github.com/mem0ai/mem0](https://github.com/mem0ai/mem0)
-- **Stars:** 46.9k ⭐
+- **Stars:** 46,883 ⭐
 - **Language:** Python
 - **License:** Apache-2.0
 - **Last Commit:** 2026-02-03
-- **Category:** memory, personalization
-- **Best for:** durable user and account memory in AI email systems
+- **Category:** memory, personalization, agents
+- **Best for:** Persistent user and account memory for AI email personalization
 
 ---
 
-### Quality, Privacy, Labeling, And Evaluation
+#### [Qdrant](https://github.com/qdrant/qdrant)
+> **Description:** Qdrant is a production-ready vector database and similarity search engine designed for storing and searching embeddings with payload filtering. In email-marketing terms, that means you can build systems that match subscribers to content, products, offers, case studies, or lifecycle messaging based on semantic similarity rather than brittle keyword rules. It is especially useful when paired with RAG or recommendation workflows that need fast filtering and scalable retrieval. GitHub shows **28,659 stars**, **Rust** as the primary language, **Apache-2.0** licensing, and a latest visible update on **2026-02-08**.
 
-#### [Langfuse](https://github.com/langfuse/langfuse)
-> **Description:** Langfuse is an open-source LLM engineering platform for observability, datasets, prompt management, playground experiments, metrics, and evaluations. This matters for email marketers because AI-generated copy and automation need monitoring, debugging, and version control if they are going to ship beyond experiments. It is particularly strong when teams want prompt traces, comparative evaluation, and quality loops around generation or personalization systems. Verified metadata: last commit `2026-02-08`, `21.7k` stars, primary language `TypeScript`, license `MIT`.
-
-- **GitHub:** [github.com/langfuse/langfuse](https://github.com/langfuse/langfuse)
-- **Stars:** 21.7k ⭐
-- **Language:** TypeScript
-- **License:** MIT
+- **GitHub:** [github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)
+- **Stars:** 28,659 ⭐
+- **Language:** Rust
+- **License:** Apache-2.0
 - **Last Commit:** 2026-02-08
-- **Category:** observability, evaluation
-- **Best for:** monitoring and debugging AI email pipelines
+- **Category:** vector database, retrieval, personalization
+- **Best for:** Segment-aware retrieval and content matching
 
 ---
 
 #### [Promptfoo](https://github.com/promptfoo/promptfoo)
-> **Description:** Promptfoo focuses on prompt, agent, and RAG testing, including red teaming, regression evaluation, vulnerability scanning, and CI/CD integration. For email marketers, that is useful when subject-line generators, copy assistants, or personalization systems need repeatable tests before going live. It helps teams compare models, enforce quality bars, and catch sensitive failure modes such as hallucination or policy leakage. Verified metadata: last commit `2026-02-08`, `10.3k` stars, primary language `TypeScript`, license `MIT`.
+> **Description:** Promptfoo is an evaluation and red-teaming framework for prompts, agents, and RAG pipelines, with CLI and CI-friendly workflows. That is valuable for email marketers because AI email systems fail in very specific ways: wrong pricing, hallucinated product claims, policy violations, off-brand tone, and broken personalization logic. Promptfoo gives teams a concrete way to regression-test prompts and agent setups before sending anything customer-facing. GitHub shows **10,348 stars**, **TypeScript** as the primary language, **MIT** licensing, and a latest visible update on **2026-02-08**.
 
 - **GitHub:** [github.com/promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)
-- **Stars:** 10.3k ⭐
+- **Stars:** 10,348 ⭐
 - **Language:** TypeScript
 - **License:** MIT
 - **Last Commit:** 2026-02-08
-- **Category:** evaluation, red-teaming
-- **Best for:** testing AI copy, prompts, and campaign assistants before launch
+- **Category:** evaluation, testing, prompt QA
+- **Best for:** Testing AI email prompts before production sends
 
 ---
 
-#### [Label Studio](https://github.com/HumanSignal/label-studio)
-> **Description:** Label Studio is a general-purpose data labeling and annotation platform that can support text classification, extraction, and review workflows. In email marketing contexts, it is useful for building and refining custom datasets for intent labeling, churn signals, spam patterns, lifecycle classification, and content QA. It is not an email product by itself, but it is one of the most useful open-source tools for turning raw campaign or customer data into supervised training and evaluation assets. Verified metadata: last commit `2025-11-17`, `25.5k` stars, primary language `JavaScript`, license `Apache-2.0`.
+### Email Marketing Platforms and Delivery Stack
 
-- **GitHub:** [github.com/HumanSignal/label-studio](https://github.com/HumanSignal/label-studio)
-- **Stars:** 25.5k ⭐
+#### [Mautic](https://github.com/mautic/mautic)
+> **Description:** Mautic is still the flagship open source marketing automation platform, with built-in support for campaigns, forms, segments, email journeys, and integrations. It is not AI-native, but it remains one of the best open foundations for marketers who want to connect OSS AI layers to a real email-marketing engine instead of a toy demo. The project explicitly emphasizes privacy, extensibility, and self-hosting, which aligns well with regulated or data-sensitive teams. GitHub shows **9,041 stars**, **PHP** as the primary language, **GPL-3.0-style project licensing**, and a latest visible update on **2026-01-09**.
+
+- **GitHub:** [github.com/mautic/mautic](https://github.com/mautic/mautic)
+- **Stars:** 9,041 ⭐
+- **Language:** PHP
+- **License:** GPL-3.0
+- **Last Commit:** 2026-01-09
+- **Category:** marketing automation, email marketing, self-hosted
+- **Best for:** Full open source campaign orchestration with AI add-ons
+
+---
+
+#### [listmonk](https://github.com/knadh/listmonk)
+> **Description:** listmonk is a fast, self-hosted newsletter and mailing-list manager packaged as a single binary with a modern dashboard. Its README highlights PostgreSQL-backed performance, Docker deployment, campaign management, and a simple operational footprint, which makes it attractive for lean teams that want reliable newsletter infrastructure without a heavy marketing suite. Pair it with OSS AI tools from the earlier sections and you get a practical “generate with AI, send with OSS” setup. GitHub shows **18,700 stars**, **Go** as the primary language, **AGPL-3.0** licensing, and a latest visible release on **2026-01-02**.
+
+- **GitHub:** [github.com/knadh/listmonk](https://github.com/knadh/listmonk)
+- **Stars:** 18,700 ⭐
+- **Language:** Go
+- **License:** AGPL-3.0
+- **Last Commit:** 2026-01-02
+- **Category:** newsletter, campaigns, self-hosted
+- **Best for:** Fast self-hosted newsletters backed by AI-generated content
+
+---
+
+#### [Keila](https://github.com/pentacent/keila)
+> **Description:** Keila is an open source newsletter tool positioned as a self-hosted alternative to Mailchimp or Sendinblue. Its README emphasizes campaign sending, signup forms, SMTP support for small installs, and provider integrations such as AWS SES, Mailgun, Postmark, and Sendgrid for larger sending needs. This category is where the market gap is most obvious: Keila is strong OSS software, but the AI layer usually still needs to come from other GitHub projects in this list. GitHub shows **2,100 stars**, **Elixir** as the primary language, **AGPL-3.0** licensing, and a latest visible release on **2026-02-25**.
+
+- **GitHub:** [github.com/pentacent/keila](https://github.com/pentacent/keila)
+- **Stars:** 2,100 ⭐
+- **Language:** Elixir
+- **License:** AGPL-3.0
+- **Last Commit:** 2026-02-25
+- **Category:** newsletter, forms, self-hosted
+- **Best for:** Lightweight OSS newsletter operations with AI-generated copy
+
+---
+
+#### [Mailtrain](https://github.com/Mailtrain-org/mailtrain)
+> **Description:** Mailtrain is a self-hosted newsletter application built on Node.js with list management, segmentation, custom fields, templates, reports, automation, and built-in Zone-MTA support. It is older than some newer entrants, but the feature list is still relevant for marketers who want an inspectable campaign engine they can pair with open source AI generation and testing layers. It is best suited for teams comfortable self-hosting and managing their own mail stack. GitHub shows **5,702 stars**, **JavaScript** as the primary language, **GPL-3.0** licensing, and a latest visible update on **2025-10-05**.
+
+- **GitHub:** [github.com/Mailtrain-org/mailtrain](https://github.com/Mailtrain-org/mailtrain)
+- **Stars:** 5,702 ⭐
 - **Language:** JavaScript
-- **License:** Apache-2.0
-- **Last Commit:** 2025-11-17
-- **Category:** labeling, dataset-ops
-- **Best for:** building labeled datasets for email classification and QA
+- **License:** GPL-3.0
+- **Last Commit:** 2025-10-05
+- **Category:** newsletters, segmentation, automation
+- **Best for:** Self-hosted lifecycle and broadcast email programs
 
 ---
 
-#### [Adala](https://github.com/HumanSignal/Adala)
-> **Description:** Adala is HumanSignal’s autonomous data-labeling agent framework. It is a useful step up from manual labeling when marketers want AI-assisted dataset preparation for segmentation models, inbox classification, reply-type tagging, or copy-review pipelines. The repository is smaller than Label Studio but directly aligned with agentic labeling and data curation tasks. Verified metadata: last commit `2025-11-14`, `1.3k` stars, primary language `Python`, license `Apache-2.0`.
+#### [Postal](https://github.com/postalserver/postal)
+> **Description:** Postal is not a marketer-facing AI app; it is a mail delivery platform for sending and receiving email at infrastructure level. That makes it useful when you want to own the transport layer behind AI-assisted campaigns, transactional sends, or internal messaging systems. The README explicitly frames it as an open source alternative to services like Sendgrid, Mailgun, or Postmark, which is exactly why it belongs in an email-marketing stack list. GitHub shows **16,080 stars**, **Ruby** as the primary language, **MIT** licensing, and a latest visible update on **2025-10-10**.
 
-- **GitHub:** [github.com/HumanSignal/Adala](https://github.com/HumanSignal/Adala)
-- **Stars:** 1.3k ⭐
-- **Language:** Python
-- **License:** Apache-2.0
-- **Last Commit:** 2025-11-14
-- **Category:** labeling-agents, data-ops
-- **Best for:** AI-assisted annotation for email and lifecycle datasets
-
----
-
-#### [MCPO](https://github.com/open-webui/mcpo)
-> **Description:** MCPO is a simple, secure MCP-to-OpenAPI proxy server from the Open WebUI ecosystem. It is relevant to email marketers because many useful internal tools for AI email workflows are exposed as APIs, and MCPO provides a bridge layer that helps agents interact with them in a structured way. That makes it practical for connecting campaign tools, customer data services, approval systems, and internal content APIs to AI assistants. Verified metadata: last commit `2025-12-08`, `3.8k` stars, primary language `Python`, license `MIT`.
-
-- **GitHub:** [github.com/open-webui/mcpo](https://github.com/open-webui/mcpo)
-- **Stars:** 3.8k ⭐
-- **Language:** Python
+- **GitHub:** [github.com/postalserver/postal](https://github.com/postalserver/postal)
+- **Stars:** 16,080 ⭐
+- **Language:** Ruby
 - **License:** MIT
-- **Last Commit:** 2025-12-08
-- **Category:** mcp, api-proxy
-- **Best for:** exposing marketing APIs safely to AI agents
+- **Last Commit:** 2025-10-10
+- **Category:** email infrastructure, delivery, self-hosted
+- **Best for:** Owning the mail delivery layer under AI-assisted sends
 
 ---
 
 ## FAQ
 
 ### What are the best open source AI tools for email marketers in 2026?
-If you want direct email-native OSS, start with `Inbox Zero` and `Aomail`. If you want a broader build stack, combine `Flowise` or `Langflow` for orchestration, `Qdrant` or `Chroma` for retrieval, `LiteLLM` for model routing, and `Langfuse` or `Promptfoo` for quality control.
+If you want the shortest shortlist, start with Flowise or Langflow for orchestration, Ollama or Jan for local model access, AnythingLLM or LibreChat for marketer-friendly AI workspaces, LlamaIndex plus Qdrant for personalization, and Mautic or listmonk for actual email execution.
 
-### Are there many truly open source AI email assistants on GitHub?
-No. That is the biggest gap in this niche. GitHub has far more open-source agent frameworks and RAG tools than polished AI products built only for email marketers, which is why this list mixes direct email assistants with the underlying OSS stack used to build production email systems.
+### Can I build an AI email marketing stack without proprietary SaaS?
+Yes, but the cleanest approach is composable. A realistic fully GitHub-based stack is: Ollama or llama.cpp for local inference, Flowise or Langflow for workflows, Mem0 plus Qdrant for memory and retrieval, Promptfoo for testing, and Mautic, Keila, Mailtrain, or listmonk for campaign sending.
 
-### Which GitHub repos are best for AI-powered email personalization?
-For personalization, the strongest building blocks here are `Mem0`, `Qdrant`, `Milvus`, `Chroma`, `Haystack`, and `LangChain`. They help store memory, retrieve brand or customer context, and ground copy generation in data instead of generic prompting.
+### Which open source tools are best for self-hosted AI email copywriting?
+For solo or small-team copywriting, Jan, Ollama, AnythingLLM, and LibreChat are the easiest starting points. If you need more control over prompt chains, add LangChain, DSPy, or LlamaIndex behind them.
 
-### Which open source AI tools help automate email marketing workflows?
-`Flowise`, `Langflow`, `Dify`, `crewAI`, `AutoGen`, and `Composio` are the strongest automation-oriented options in this repo. They help orchestrate tasks, call external tools, and connect agents to systems like Gmail, Slack, and internal APIs.
+### What is the best open source alternative to Mailchimp with AI support?
+There is no single perfect Mailchimp replacement that is both AI-native and mature. Mautic is the closest full marketing automation platform, while listmonk and Keila are strong newsletter-centric tools. Most teams add AI by connecting one of those platforms to Flowise, Langflow, Ollama, or another OSS model layer.
 
-### What should email marketers use to test and monitor AI-generated email copy?
-Use `Promptfoo` for evaluations and safety testing, `Langfuse` for observability and prompt iteration, and `Label Studio` or `Adala` when you need labeled datasets for QA, classification, or model improvement loops.
+### Which GitHub repos help with email personalization and RAG?
+The strongest set here is LlamaIndex, LangChain, Haystack, Mem0, and Qdrant. Those repos are the backbone for retrieving customer, product, and knowledge-base context so emails can be more relevant than generic prompt-only outputs.
 
-### Can I self-host these AI email marketing tools?
-Most of the repositories in this list support self-hosting or local deployment. Some are polished apps, some are developer frameworks, and a few have license nuances you should read carefully before commercial deployment, especially AGPL-licensed projects.
+### How do I verify that an AI email marketing tool is truly open source?
+Check the GitHub repo directly for the license file, recent commit activity, issue history, and whether the main product code is actually in the repository. Be careful with “open core” or source-available projects where the hosted product may be much more capable than the public repo.
 
 ## GitHub Search Queries Used
 
-The local GitHub CLI could not reach `api.github.com` from this environment, so final metadata was verified against GitHub web repository pages. These are the actual search commands and search patterns used during discovery:
-
 ```bash
-gh search repos "ai email" --limit 5
-gh search repos "\"email\" \"ai assistant\"" --limit 20
-gh search repos "\"workflow automation\" llm" --limit 20
-gh search repos "\"vector database\" ai" --limit 20
-gh search repos "\"llm engineering\" open source" --limit 20
-gh search repos "\"email marketing\" github" --limit 20
+gh search repos "email marketing ai" --match name,description,readme --sort updated --order desc
+gh search repos "newsletter ai self-hosted" --match name,description,readme --sort stars --order desc
+gh search repos "marketing automation open source email github" --match name,description,readme --sort stars --order desc
+gh search repos "llm workflow builder self-hosted" --match name,description,readme --sort stars --order desc
+gh search repos "rag personalization vector database llm" --match name,description,readme --sort stars --order desc
+gh search repos "local llm chat self-hosted" --match name,description,readme --sort stars --order desc
+gh search repos "open source newsletter platform" --match name,description,readme --sort updated --order desc
+gh search repos "open source mail delivery platform" --match name,description,readme --sort stars --order desc
+gh search repos "prompt testing llm open source" --match name,description,readme --sort stars --order desc
 ```
 
-Web verification then expanded through GitHub repository, organization, and topic pages for the repos listed above.
-
 ## Contributing
+Contributions are welcome. Submit a pull request with:
 
-Contributions are welcome, but every submission must include a public `github.com` repository URL. Please do not submit proprietary SaaS products, cloud-only services, or tools without a clearly public GitHub repository and a verifiable license.
+- A public `github.com` repository URL
+- A short explanation of why the repo is useful for email marketers
+- The repo license, primary language, stars, and latest visible commit date
+- A note on whether the tool is AI-native, AI-adjacent, or email-infrastructure-focused
 
-For full contribution rules, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+Submissions without a public GitHub repo URL will be rejected.
 
 ## License
-
 MIT License. See [LICENSE](./LICENSE).
